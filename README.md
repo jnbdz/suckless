@@ -11,7 +11,7 @@ You need to install `libxft-bgra` before `st` and `dwm`. If you want the emojs.
 
 ```bash
 cd ./lib/libxft
-# Make sure it is the right branch
+# Make sure it is the right branch --> libXft-2.3.4-debian
 git branch -a
 # Install
 sh autogen.sh --sysconfdir=/etc --prefix=/usr --mandir=/usr/share/man
