@@ -1,0 +1,9 @@
+[submodule "LukeSmithxyz/dwm"]
+	path = LukeSmithxyz/dwm
+	url = git@github.com:LukeSmithxyz/dwm.git
+[submodule "LukeSmithxyz/st"]
+	path = LukeSmithxyz/st
+	url = git@github.com:LukeSmithxyz/st.git
+[submodule "lib/libxft"]
+	path = lib/libxft
+	url = git@github.com:jnbdz/libxft.git
