@@ -66,6 +66,7 @@ git rebase upstream/master
 ```
 
 **Sources:**
+- https://gitlab.freedesktop.org/xorg/lib/libxft/ (repo page for libxft)
 - https://www.atlassian.com/git/tutorials/git-submodule (basic of git modules)
 - https://stackoverflow.com/questions/29882960/changing-an-existing-submodules-branch (instructions on how to change submodules branch in git)
 - https://gist.github.com/0xjac/85097472043b697ab57ba1b1c7530274 (upstream & forking instructions)
