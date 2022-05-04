@@ -3,7 +3,7 @@ All the suckless essentials (mostly git modules).
 
 ## Install
 ```bash
-sudo apt-get install autoconf build-essential xutils-dev
+sudo apt-get install autoconf build-essential xutils-dev libxft-dev libxft2
 ```
 
 ### Install on Debian distros (Kali, Debian, Ubuntu, etc)
@@ -15,6 +15,8 @@ After you install `dwn` you will need to modify: `/usr/lib/win-kex/xstartup`
 Here is an article I wrote on the subject: [How to change Window Manager (GUI) for win-kex](https://jeannicolasboulay.medium.com/how-to-change-window-manager-gui-for-win-kex-7b6a749f423b)
 
 #### Install libxft-bgra
+You might need to install it outside of the package manager. If the package manager has `libxft-dev` `libxft2` than you are golden!
+
 You need to install `libxft-bgra` before `st` and `dwm`. If you want the emojs.
 
 ```bash
