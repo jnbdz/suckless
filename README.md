@@ -9,7 +9,7 @@ sudo apt-get install autoconf build-essential xutils-dev
 ### Install on Debian distros (Kali, Debian, Ubuntu, etc)
 For Debian based Linux distros you need to install `libxft-bgra` for the emojis to show.
 
-#### win-kex (Kali in Windows WSL)
+#### For win-kex (Kali in Windows WSL)
 After you install `dwn` you will need to modify: `/usr/lib/win-kex/xstartup`
 
 Here is an article I wrote on the subject: [How to change Window Manager (GUI) for win-kex](https://jeannicolasboulay.medium.com/how-to-change-window-manager-gui-for-win-kex-7b6a749f423b)
@@ -37,6 +37,32 @@ git checkout -t [branch]
 git add [add again the dir of the module]
 git commit [...]
 git push
+```
+Don't forget to update where you have clone the repo: 
+```bash
+git submodule update --recursive
+```
+
+### Add upstream
+If you are working on the lib `libxft-bgra` you need to do this step.
+```bash
+git remote add upstream git@gitlab.freedesktop.org:xorg/lib/libxft.git 
+git remote set-url --push upstream DISABLE
+```
+Then to verify that evrything was added correctly for the upstream: 
+`git remote -v`
+
+This is what you should see: 
+```bash
+origin  git@github.com:jnbdz/libxft.git (fetch)
+origin  git@github.com:jnbdz/libxft.git (push)
+upstream        git@gitlab.freedesktop.org:xorg/lib/libxft.git (fetch)
+upstream        DISABLE (push)
+```
+To pull changes from the upstream (verify that you are in the right branch first):
+```bash
+git fetch upstream
+git rebase upstream/master
 ```
 
 **Sources:**
