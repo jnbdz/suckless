@@ -3,7 +3,35 @@ All the suckless essentials (mostly git modules).
 
 ## Install
 ```bash
-sudo apt-get install autoconf build-essential xutils-dev libxft-dev libxft2
+sudo apt-get install autoconf build-essential xutils-dev libxft-dev libxft2 libxinerama-dev libx11-xcb-dev libxcb-res0-dev fonts-linuxlibertine fonts-inconsolata fonts-symbola ttf-ancient-fonts-symbola fonts-noto
+```
+
+### Install the needed fonts
+```bash
+# 1. Download the latest version
+wget https://github.com/eosrei/twemoji-color-font/releases/download/v13.1.0/TwitterColorEmoji-SVGinOT-Linux-13.1.0.tar.gz
+# 2. Uncompress the file
+tar zxf TwitterColorEmoji-SVGinOT-Linux-13.1.0.tar.gz
+# 3. Run the installer
+cd TwitterColorEmoji-SVGinOT-Linux-13.1.0
+./install.sh
+```
+**Source:** https://github.com/eosrei/twemoji-color-font
+
+```bash
+# 1. Download the latest version
+wget https://github.com/eosrei/emojione-color-font/releases/download/v1.4/EmojiOneColor-SVGinOT-Linux-1.4.tar.gz
+# 2. Uncompress the file
+tar zxf EmojiOneColor-SVGinOT-Linux-1.4.tar.gz
+# 3. Run the installer
+cd EmojiOneColor-SVGinOT-Linux-1.4
+./install.sh
+```
+You might also need: https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.config/fontconfig/fonts.conf
+
+### Reload fonts in Debian
+```bash
+dpkg-reconfigure fontconfig fontconfig-config
 ```
 
 ### Install on Debian distros (Kali, Debian, Ubuntu, etc)
@@ -26,6 +54,13 @@ git branch -a
 # Install
 sh autogen.sh --sysconfdir=/etc --prefix=/usr --mandir=/usr/share/man
 ```
+### Install `dwm`
+Inside the dwm source: 
+```bash
+sudo make install
+```
+### Install `st`
+Same as `dwm`.
 
 ## Git
 ### Add module
