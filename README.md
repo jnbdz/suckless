@@ -3,7 +3,7 @@ All the suckless essentials (mostly git modules).
 
 ## Install
 ```bash
-sudo apt-get install autoconf build-essential
+sudo apt-get install autoconf build-essential xutils-dev
 ```
 
 ### Install libxft-bgra
